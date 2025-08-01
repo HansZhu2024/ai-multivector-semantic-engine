@@ -3,8 +3,8 @@
 This repository provides a whitepaper and sample implementation for a semantic query system powered by multiple vector databases. It combines real data embeddings, programmatic usage contexts, and semantic fusion to enable natural language–based data exploration.
 
 ## 📄 Whitepapers
-- [中文版](whitepaper/whitepaper_zh.md)
-- [English Version](whitepaper/whitepaper_en.md)
+- [中文版](whitepaper_zh.md)
+- [English Version](whitepaper_en.md)
 
 ## ✨ Key Features
 - Multi-source semantic embedding (data, code, views, stored procs)
