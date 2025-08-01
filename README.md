@@ -62,9 +62,16 @@ prompt = assemble_prompt(query, results)
 sql = local_llm(prompt)
 ```
 
-## Getting Started
+Use Cases
+🧠 AI SQL Copilot – Generate SQL from plain language questions
 
-> 🚧 Full open-source setup scripts and deployment instructions coming soon.
+🔄 Cross-System Field Mapping – Discover related fields in large schemas
+
+📊 Automated Reporting – Dynamically generate dashboards and analytics
+
+🔍 Schema Understanding – Understand undocumented or legacy databases
+
+🧾 Data Governance – Trace semantic lineage across fields and systems
 
 For now, this is a research prototype. If you’re interested in collaboration or contributing, feel free to open an issue or contact the maintainer.
 
