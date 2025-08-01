@@ -63,6 +63,7 @@ sql = local_llm(prompt)
 ```
 
 Use Cases
+
 🧠 AI SQL Copilot – Generate SQL from plain language questions
 
 🔄 Cross-System Field Mapping – Discover related fields in large schemas
