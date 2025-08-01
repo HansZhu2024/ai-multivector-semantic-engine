@@ -1,27 +1,62 @@
-# AI-Driven Semantic Query System
+# AI-Driven Multi-Vector Semantic Analysis Platform
 
-This repository provides a whitepaper and sample implementation for a semantic query system powered by multiple vector databases. It combines real data embeddings, programmatic usage contexts, and semantic fusion to enable natural language–based data exploration.
+**AI-driven semantic vector platform for natural language-based data understanding and automatic SQL generation.**
 
-## 📄 Whitepapers
-- [English Version](whitepaper/AI-Driven_Multi-Vector_Semantic_Query_System_Based_on_Data_Content_and_Program_Semantics.pdf)
-- [中文版](whitepaper/技術白皮書：基於資料內容與程式語意的AI多向量資料庫驅動式查詢系統.pdf)
+## Overview
 
-## ✨ Key Features
-- Multi-source semantic embedding (data, code, views, stored procs)
-- Vector-based reasoning and query generation
-- LLM + BGE embedding + FAISS/Qdrant
+This project introduces a multi-vector semantic analysis framework powered by AI. It encodes both **data content** and **program semantics** into vector representations across several semantic layers. By leveraging vector search and LLM-based reasoning, the system enables **natural language-driven exploration** of structured data, automatic SQL generation, and schema understanding — even for undocumented or complex databases.
 
-## 📦 Folder Structure
-- `whitepaper/`: Core documentation
-- `examples/`: Sample embedding scripts and API designs
+## Key Features
 
-## 🛠 Tech Stack
-- BGE embedding model
-- LLaMA / GPT4All (local LLM)
-- FAISS / Qdrant
-- Python + SQL
+- 🔍 **Multi-faceted semantic modeling**  
+  Encodes field values, code usage, view logic, and procedure behavior into distinct vector spaces.
 
-## 📬 Contact
-Feel free to open issues or pull requests to discuss!
+- 💬 **Natural language query interface**  
+  Accepts user prompts and translates them into intelligent SQL queries through vector retrieval and LLM inference.
 
+- 🔗 **Semantic alignment and reasoning**  
+  Supports synonym detection, schema mapping, and semantic lineage across database objects.
 
+- ⚙️ **Modular architecture**  
+  Designed for extensibility with optional support for views, stored procedures, and multilingual data environments.
+
+## System Architecture
+
+The system organizes semantics across five vector databases:
+
+| Vector DB | Description                                      |
+|-----------|--------------------------------------------------|
+| **A**     | Field Content Semantics – data value distribution, field meaning |
+| **B**     | Code Usage Semantics – CRUD context from application code |
+| **C**     | Semantic Integration Layer – high-level alignment across sources |
+| **D**     | View Semantics (optional) – joins, aggregations, filters |
+| **E**     | Stored Procedure Semantics (optional) – logic and parameter meaning |
+
+### Example Pipeline
+
+```python
+# Step 1: Embed field value semantics
+description = "This column contains order creation timestamps like 2024-01-01"
+vector = model.encode(description)
+vector_db_A.insert(vector)
+
+# Step 2: Analyze source code context
+code_snippet = "db.query(Order).filter(Order.created_at >= '2024-01-01')"
+summary = local_llm(f"Describe semantic intent:\n{code_snippet}")
+vector_db_B.insert(model.encode(summary))
+
+# Step 3: Handle a natural language query
+query = "Analyze the order volume from Q1 to Q4 in 2024"
+query_vec = model.encode(query)
+
+# Step 4: Retrieve related fields from semantic databases
+results = {
+    "A": vector_db_A.search(query_vec),
+    "B": vector_db_B.search(query_vec),
+    "D": vector_db_D.search(query_vec),
+    "E": vector_db_E.search(query_vec),
+}
+
+# Step 5: Feed into prompt for SQL generation
+prompt = assemble_prompt(query, results)
+sql = local_llm(prompt)
