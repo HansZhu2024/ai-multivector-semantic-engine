@@ -60,3 +60,54 @@ results = {
 # Step 5: Feed into prompt for SQL generation
 prompt = assemble_prompt(query, results)
 sql = local_llm(prompt)
+```
+
+## Technologies Used
+
+| Component              | Description                                      |
+|------------------------|--------------------------------------------------|
+| **Embedding Model**    | BGE (bge-base-zh-v1.5) for semantic vectorization |
+| **LLM**                | Local LLaMA3, Mistral or similar open-source models |
+| **Vector DBs**         | FAISS, Qdrant, Weaviate (local or cloud options) |
+| **Code Analysis**      | AST static parsing, LLM summarization, regex tools |
+
+## Use Cases
+
+- 🧠 **AI SQL Copilot** – Generate SQL from plain language questions  
+- 🔄 **Cross-System Field Mapping** – Discover related fields in large schemas  
+- 📊 **Automated Reporting** – Dynamically generate dashboards and analytics  
+- 🔍 **Schema Understanding** – Understand undocumented or legacy databases  
+- 🧾 **Data Governance** – Trace semantic lineage across fields and systems
+
+## Innovation Highlights
+
+- **Semantic Fusion:** Combines field data, code logic, and metadata  
+- **LLM-Oriented Architecture:** Designed to enrich LLM prompts with real semantics  
+- **Zero-Doc Exploration:** Enables access to poorly documented databases  
+- **Multilingual and Extensible:** Easily supports Chinese, English, Vietnamese and more
+
+## Roadmap
+
+- [ ] Knowledge graph and ontology integration  
+- [ ] Multilingual model support  
+- [ ] Support for unstructured/heterogeneous sources  
+- [ ] User feedback loop with RLHF fine-tuning
+
+## Getting Started
+
+> 🚧 Full open-source setup scripts and deployment instructions coming soon.
+
+For now, this is a research prototype. If you’re interested in collaboration or contributing, feel free to open an issue or contact the maintainer.
+
+---
+
+## License
+
+MIT License
+
+## Contact
+
+For feedback, discussion, or collaboration:
+
+**Hans Zhu**  
+✉️ [hanszhu687@gmail.com]
