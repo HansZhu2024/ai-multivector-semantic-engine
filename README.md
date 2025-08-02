@@ -1,10 +1,10 @@
-# AI-Driven Multi-Vector Semantic Analysis Platform
+# AI-Driven Multi-Vector Semantic Analysis Architecture
 
-**AI-driven semantic vector platform for natural language-based data understanding and automatic SQL generation.**
+**AI-driven semantic vector architecture for natural language-based data understanding and automatic SQL generation.**
 
 ## Overview
 
-This project introduces a multi-vector semantic analysis framework powered by AI. It encodes both **data content** and **program semantics** into vector representations across several semantic layers. By leveraging vector search and LLM-based reasoning, the system enables **natural language-driven exploration** of structured data, automatic SQL generation, and schema understanding — even for undocumented or complex databases.
+This project introduces a multi-vector semantic analysis architecture powered by AI. It encodes both **data content** and **program semantics** into vector representations across several semantic layers. By leveraging vector search and LLM-based reasoning, the system enables **natural language-driven exploration** of structured data, automatic SQL generation, and schema understanding — even for undocumented or complex databases.
 
 ## 📄 Whitepapers
 - [English Version](whitepaper/AI-Driven_Multi-Vector_Semantic_Analysis_Platform.pdf)
