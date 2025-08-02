@@ -7,8 +7,8 @@
 This project introduces a multi-vector semantic analysis architecture powered by AI. It encodes both **data content** and **program semantics** into vector representations across several semantic layers. By leveraging vector search and LLM-based reasoning, the system enables **natural language-driven exploration** of structured data, automatic SQL generation, and schema understanding — even for undocumented or complex databases.
 
 ## 📄 Whitepapers
-- [English Version](whitepaper/AI-Driven_Multi-Vector_Semantic_Analysis_Platform.pdf)
-- [中文版](whitepaper/AI_驅動的多向量語意分析平台.pdf)
+- [English Version](whitepaper/AI-Driven_Multi-Vector_Semantic_Analysis_Architecture.pdf)
+- [中文版](whitepaper/AI_驅動的多向量語意分析架構.pdf)
 
 ## Key Features
 
